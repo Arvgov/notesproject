@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>notesproject</title>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script>window.$ = window.jQuery = require("./jquery-3.5.1.min.js");</script>
+	<script>if (window.module) module = window.module;</script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <script src="hammer.min.js"></script>
+    <script src="document.js"></script>
+    <script src="recognize.js"></script>
+    <script src="renderer.js"></script>
+    <script src="events.js"></script>
+    <script src="driver.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <div id="menu">
+        <span id="save-button" class="menu-button">save</span>
+        <span id="load-button" class="menu-button">load</span>
+        <span id="new-button" class="menu-button">new</span>
+        <span id="fullscreen-button" class="menu-button">[+]</span>
+    </div>
+    <canvas id="canvas" width="500px" height="500px"></canvas>
+  </body>
+</html>
