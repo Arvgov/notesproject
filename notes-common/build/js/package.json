@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/notes-common",
+    "packages/notes-common-test",
+    "packages_imported/kotlin/1.3.72",
+    "packages_imported/kotlin-source-map-loader/1.3.72",
+    "packages_imported/kotlin-test/1.3.72",
+    "packages_imported/kotlin-test-js-runner/1.3.72"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "notes-common",
+  "version": "0.0.1"
+}

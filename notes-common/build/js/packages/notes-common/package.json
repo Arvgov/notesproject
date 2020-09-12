@@ -1,0 +1,18 @@
+{
+  "main": "kotlin/notes-common.js",
+  "devDependencies": {
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0",
+    "source-map-support": "0.5.16"
+  },
+  "dependencies": {
+    "kotlin": "1.3.72",
+    "kotlin-source-map-loader": "1.3.72"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "notes-common",
+  "version": "0.0.1"
+}

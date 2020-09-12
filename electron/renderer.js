@@ -5,9 +5,11 @@ class Renderer {
     }
 
     render() {
+        /*
         this.clear()
         this.drawStrokes()
         this.drawShapes()
+        */
 	}
 
     drawStrokes() {

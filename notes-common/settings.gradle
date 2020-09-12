@@ -1,0 +1,4 @@
+rootProject.name = 'notes-common'
+
+
+enableFeaturePreview('GRADLE_METADATA')

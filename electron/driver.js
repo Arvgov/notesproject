@@ -38,7 +38,6 @@ function replaceWithDetected(shape, bounds) {
 
 $(document).ready(function() {
     const doc = new Document()
-    const recognizer = new Recognizer()
 
     let canvas = document.getElementById('canvas')
 
@@ -55,22 +54,28 @@ $(document).ready(function() {
     addCoreEvents(eventManager)
 
     eventManager.on("mouseDown", function(x, y) {
-        context.lineJoin = "round"
-        context.lineWidth = 1
-        context.moveTo(x, y)
-        context.beginPath()
         dx = x
         dy = y
         startStroke(x, y, doc, renderer)
     })
 
     eventManager.on("mouseDownMove", function(x, y) {
-        continueStroke(x, y, doc, renderer);
+        console.log(x, y)
+        context.lineJoin = "round"
+        context.lineWidth = 1
+        context.strokeStyle = "black"
+
+        context.moveTo(0, 0)
+        context.beginPath()
+        context.lineTo(100, 100)
+        context.stroke()
+
+        context.beginPath();
+        context.moveTo(dx, dy);
+        context.lineTo(x, y);
+        context.stroke();
         dx = x
         dy = y
-        context.lineTo(x, y)
-        context.stroke()
-        context.beginPath()
     })
 
     eventManager.on("mouseUp", function(x, y) {
@@ -218,7 +223,7 @@ $(document).ready(function() {
         })
 
         $(window).resize(function() {
-            renderer.resize()
+            //renderer.resize()
         });
     }
 });
